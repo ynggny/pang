@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  # app:
+  # container_name: development-admin-app
+  # build:
+  #   context: .
+  #   dockerfile: Dockerfile
+  # ports:
+  #   - "5173:5173"
+  # command: npm run dev
+  # volumes:
+  #   - .:/app
+  #   - node_modules:/app/node_modules
+
+  devcontainer:
+    container_name: devcontainer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+      - .ssh:/.ssh
+
+volumes:
+  node_modules:

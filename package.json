@@ -1,17 +1,29 @@
 {
-  "name": "my-hono-app",
-  "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
-  },
-  "dependencies": {
-    "drizzle-orm": "^0.32.1",
-    "hono": "^4.5.3"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240729.0",
-    "drizzle-kit": "^0.23.1",
-    "wrangler": "^3.57.2"
-  }
+	"name": "my-hono-app",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy --minify",
+		"cf-typegen": "wrangler types --env-interface CloudflareBindings",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"@hono/zod-openapi": "^0.15.3",
+		"bcryptjs": "^2.4.3",
+		"drizzle-orm": "^0.32.1",
+		"hono": "^4.5.5",
+		"jsonwebtoken": "^9.0.2",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.4.22",
+		"@cloudflare/workers-types": "^4.20240729.0",
+		"@miniflare/d1": "^2.14.2",
+		"@types/bcryptjs": "^2.4.6",
+		"@types/jsonwebtoken": "^9.0.6",
+		"better-sqlite3": "^11.1.2",
+		"drizzle-kit": "^0.23.1",
+		"prettier": "^3.3.3",
+		"vitest": "1.5.0",
+		"wrangler": "^3.57.2"
+	}
 }

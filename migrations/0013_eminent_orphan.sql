@@ -1,0 +1,1 @@
+ALTER TABLE `user_versions` DROP COLUMN `created_at`;

@@ -1,0 +1,95 @@
+{
+	"version": "6",
+	"dialect": "sqlite",
+	"id": "8a2441b0-6d33-46eb-9c62-dc4b5bc4de12",
+	"prevId": "073ad796-a6f9-4a69-8676-5ff8ee8cc663",
+	"tables": {
+		"old_users": {
+			"name": "old_users",
+			"columns": {
+				"user_id": {
+					"name": "user_id",
+					"type": "integer",
+					"primaryKey": true,
+					"notNull": true,
+					"autoincrement": true
+				},
+				"current_version": {
+					"name": "current_version",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": true,
+					"autoincrement": false
+				}
+			},
+			"indexes": {},
+			"foreignKeys": {},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {}
+		},
+		"user_versions": {
+			"name": "user_versions",
+			"columns": {
+				"user_version_id": {
+					"name": "user_version_id",
+					"type": "integer",
+					"primaryKey": true,
+					"notNull": true,
+					"autoincrement": true
+				},
+				"version": {
+					"name": "version",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": true,
+					"autoincrement": false
+				},
+				"user_name": {
+					"name": "user_name",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true,
+					"autoincrement": false
+				},
+				"email": {
+					"name": "email",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true,
+					"autoincrement": false
+				},
+				"hashed_password": {
+					"name": "hashed_password",
+					"type": "text",
+					"primaryKey": false,
+					"notNull": true,
+					"autoincrement": false
+				},
+				"created_at": {
+					"name": "created_at",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": true,
+					"autoincrement": false
+				}
+			},
+			"indexes": {},
+			"foreignKeys": {},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {}
+		}
+	},
+	"enums": {},
+	"_meta": {
+		"schemas": {},
+		"tables": {
+			"\"users\"": "\"old_users\""
+		},
+		"columns": {
+			"\"old_users\".\"id\"": "\"old_users\".\"user_id\""
+		}
+	},
+	"internal": {
+		"indexes": {}
+	}
+}

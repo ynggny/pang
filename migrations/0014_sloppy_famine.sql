@@ -1,0 +1,1 @@
+ALTER TABLE `user_versions` ADD `created_at` text NOT NULL;
